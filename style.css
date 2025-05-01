@@ -115,18 +115,18 @@ body {
   transition: all 0.3s ease;
 }
 
-
+/*
 @media screen and (max-width: 600px) {
   #glow-button img {
-    width: 10px;  /* Smaller width on mobile */
-    height: auto;  /* Keep the aspect ratio */
+    width: 10px;  
+    height: auto;  
   }
   
   #glow-button {
-    width: 10px;  /* Smaller width on mobile */
-    height: auto;  /* Keep the aspect ratio */
+    width: 10px;  
+    height: auto;  
   }
-}
+}  */
 
 .tracklist-button {
   position: fixed;
@@ -425,4 +425,60 @@ body {
 }
 #mute-toggle:hover {
 	transform: scale(1.3);
+}
+
+
+@media screen and (max-width: 600px) {
+	#glow-button img {
+		width: 1px;
+	}
+	
+#glow-button{
+	width: 300px;   /* doubled size */
+  height: 100px;  /* doubled size */
+  bottom: 20px;
+}	
+
+#man {
+  position: absolute;
+  bottom: -10px;
+  left: -110px;
+  width: 400px;
+  height: auto;
+  animation: floatMan 5s infinite ease-in-out;
+  cursor: pointer;  /* Makes the man image clickable */
+}
+
+.container {
+    position: absolute;
+    bottom: 20px;
+    right: 60px; /* Move the button/container further to the right */
+	 z-index: 1;
+}
+
+#mute-toggle {
+  position: absolute;
+  top: 40px;
+  right: 50px;
+  width: 60px;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+  z-index: 9999;
+  
+}
+
+.talkbox {
+  position: absolute;
+  bottom: 190px; /* Adjust the position above the "man" image */
+  left: 120px;
+  width: 120px; /* Adjust width to fit your message box PNG */
+  height: 110px; /* Adjust the height to fit the message PNG */
+  background: url('talkbox.png') no-repeat center center;  /* Use PNG as background */
+  background-size: contain;  /* Ensure the PNG fits within the box */
+  display: none;  /* Hidden by default */
+  opacity: 0;  /* Initially hidden */
+  transition: opacity 0.5s ease-in, opacity 1s ease-out; /* Fade in and out smoothly */
+  animation: floatTalkBox 10s infinite ease-in-out;  /* Floating effect */
+}
+
 }
