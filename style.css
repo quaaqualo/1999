@@ -440,6 +440,16 @@ body {
 }
 
 
+/* style.css | https://quaaqualo.github.io/1999/style.css */
+
+.dropup-menu {
+  /* left: -112.2%; */
+  /* width: 200px; */
+  left: -205.2%;
+  width: 355px;
+}
+
+
 @media screen and (max-width: 600px) {
 	/* #glow-button img {
 		width: 1px;
