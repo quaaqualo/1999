@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div id="star-container"></div>
+
+
+<style>
+body {
+    font-family: Arial, sans-serif; /* Choose a font */
+    background-color: #333; /* Dark background for contrast */
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    color: white; /* Default white text */
+}
+
+.centered-text {
+	max-width: 1000px;
+    font-size: 30px; /* Large text */
+    text-align: center; /* Center the text */
+    color: white; /* White text */
+    font-weight: bold; /* Optional: Make the text bold */
+}
+
+  @media screen and (max-width: 600px) {
+	#glow-button img {
+		width: 1px;
+	}
+	
+#glow-button{
+	width: 300px;   /* doubled size */
+  height: 100px;  /* doubled size */
+  bottom: 20px;
+}	
+
+#man {
+  position: absolute;
+  bottom: -10px;
+  left: -110px;
+  width: 400px;
+  height: auto;
+  animation: floatMan 5s infinite ease-in-out;
+  cursor: pointer;  /* Makes the man image clickable */
+}
+
+.container {
+    position: absolute;
+    bottom: 20px;
+    right: 60px; /* Move the button/container further to the right */
+	 z-index: 1;
+}
+
+#mute-toggle {
+  position: absolute;
+  top: 40px;
+  right: 50px;
+  width: 60px;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+  z-index: 9999;
+  
+}
+
+.talkbox {
+  position: absolute;
+  bottom: 190px; /* Adjust the position above the "man" image */
+  left: 120px;
+  width: 120px; /* Adjust width to fit your message box PNG */
+  height: 110px; /* Adjust the height to fit the message PNG */
+  background: url('talkbox.png') no-repeat center center;  /* Use PNG as background */
+  background-size: contain;  /* Ensure the PNG fits within the box */
+  display: none;  /* Hidden by default */
+  opacity: 0;  /* Initially hidden */
+  transition: opacity 0.5s ease-in, opacity 1s ease-out; /* Fade in and out smoothly */
+  animation: floatTalkBox 10s infinite ease-in-out;  /* Floating effect */
+}
+
+.tracklist {
+
+}
+
+.track-entry {
+  width: 90%;               /* Scale images to 80% of the available width */
+  max-width: 240px;         /* Maximum width for the images */
+  height: auto;
+  display: block;
+  padding: 0.1em;
+  transition: transform 0.2s ease;  /* Smooth transition on hover */
+}
+
+.dropup-menu {
+    display: none; /* Hidden by default */
+    position: absolute;
+    bottom: 120%; /* Move the menu a little higher */
+    left: -180%; /* Move the menu to the left relative to the button */
+    transform: translateX(-50%); /* Center it precisely above the button */
+     background-color: #333; /* Dark grey background */
+    border-radius: 15px;
+    width: 250px;
+    z-index: 10; /* Ensure the menu appears on top of other content */
+    animation: menuFloat 3s ease-in-out infinite; /* Apply floating animation to the entire menu */
+	
+}
+
+.dropup-menu .menu-img {
+    width: 60%; /* Make the image fill the available width */
+    height: auto; /* Maintain aspect ratio of images */
+    padding: 8px;
+    transition: transform 0.2s ease; /* Smooth transition for hover effect */
+}
+
+.centered-text {
+	max-width: 350px;
+    font-size: 20px; /* Large text */
+    text-align: center; /* Center the text */
+    color: white; /* White text */
+    font-weight: bold; /* Optional: Make the text bold */
+}
+
+@media screen and (max-width: 600px) {
+  .centered-text {
+    /* max-width: 350px; */
+    /* font-size: 20px; */
+    max-width: 288.0px;
+    font-size: 14.6px;
+  }
+  .dropup-menu {
+    /* left: -180%; */
+    /* width: 250px; */
+    left: -66.4%;
+    width: 148.0px;
+  }
+  
+  .dropup-menu {
+    /* bottom: 120%; */
+    bottom: 226.4%;
+  }
+}
+
+}
+  
+
+</style> 
+
+<div class="centered-text">
+     Quaaqualo is an music artist coming from Latvia. He's been writing music since 2018 but this current project has only started in 2023. He has released such works as MANIAKSCHITT and SUBLIMESCHITT. Also has been a frequent collaborator on MUSIC2 label artist releases, such as WEED GUMMY - FINE or secret contributions on COTASHONO - in my own words and etc. He is currently working hard on his third album, which hopefully will be released this year.   
+</div> 
+  <audio id="jinseiloopAudio" src="jinseiloop.mp3" preload="auto" loop></audio>
+ <!-- 🔊 Audio elements -->
+  <audio id="openSound" src="button.mp3" preload="auto"></audio>
+  <audio id="closeSound" src="button-close.mp3" preload="auto"></audio>
+  
+
+
+<div class="container">
+    <button class="dropup-btn">
+        <img class="btn-img" src="button-image.png" alt="Button Image">
+    </button>
+    <div class="dropup-menu">
+        <a href="index.html" target="_blank">
+            <img class="menu-img" src="option1.png" alt="Option 1"> 
+        </a>
+        <a href="https://djquaaqualo.bandcamp.com/" target="_blank">
+            <img class="menu-img" src="option2.png" alt="Option 2"> 
+        </a>
+        <a href="about.html" target="_blank">
+            <img class="menu-img" src="option3.png" alt="Option 3"> 
+        </a>
+        <a href="tracklist.html" target="_blank">
+            <img class="menu-img" src="option4.png" alt="Option 4"> 
+        </a>
+    </div>
+  </div>
+  
+  <img id="autoplay-icon" src="autoplay.png" alt="Autoplay Icon">
+	
+<img id="mute-toggle" src="unmute.png" alt="Mute Toggle">
+<!--
+<script src="script.js"></script>
+-->
+
+<script>
+
+const container = document.getElementById('star-container');
+const numStars = 50;
+
+for (let i = 0; i < numStars; i++) {
+  const star = document.createElement('div');
+  star.classList.add('star');
+
+  // Random position
+  star.style.left = Math.random() * 100 + 'vw';
+  star.style.top = Math.random() * 100 + 'vh';
+
+  // Random size between 10px and 40px
+  const size = 10 + Math.random() * 30;
+  star.style.width = `${size}px`;
+  star.style.height = `${size}px`;
+
+  // Random movement
+  const moveX = (Math.random() - 0.5) * 600;  // ±300px
+const moveY = (Math.random() - 0.5) * 600;
+  star.style.setProperty('--x', `${moveX}px`);
+  star.style.setProperty('--y', `${moveY}px`);
+  star.style.animationDuration = 15 + Math.random() * 25 + 's';
+
+  container.appendChild(star);
+} 
+	
+	 
+
+    // 🔊 Button sound toggle
+    const dropupBtn = document.querySelector('.dropup-btn');
+    const dropupMenu = document.querySelector('.dropup-menu');
+    const openSound = document.getElementById('openSound');
+    const closeSound = document.getElementById('closeSound');
+	
+ openSound.volume = 0.3;   // 30% volume
+closeSound.volume = 0.3;  // 30% volume 
+
+    let menuOpen = false;
+
+    dropupBtn.addEventListener('click', () => {
+        menuOpen = !menuOpen;
+
+        if (menuOpen) {
+            dropupMenu.style.display = 'block';
+            openSound.currentTime = 0;
+            openSound.play();
+        } else {
+            dropupMenu.style.display = 'none';
+            closeSound.currentTime = 0;
+            closeSound.play();
+        }
+    });
+	
+	// Play sound when any dropup menu link is clicked
+const menuLinks = document.querySelectorAll('.dropup-menu a');
+
+menuLinks.forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    openSound.currentTime = 0;
+    openSound.play();
+    jinseiloopAudio.muted = true; // ✅ already here
+    setTimeout(() => {
+      window.open(link.href, '_blank');
+    }, 300);
+  });
+});
+
+window.addEventListener("focus", () => {
+  if (!isMuted) {
+    jinseiloopAudio.muted = false;
+    jinseiloopAudio.play();
+  }
+});
+
+
+
+const jinseiloopAudio = document.getElementById("jinseiloopAudio");
+const autoplayIcon = document.getElementById("autoplay-icon");
+
+jinseiloopAudio.volume = 0.6;
+autoplayIcon.style.display = "none";
+
+// Function to show icon
+function showAutoplayPrompt() {
+  autoplayIcon.style.display = "block";
+  // Trigger reflow for CSS transition
+  void autoplayIcon.offsetWidth;
+  autoplayIcon.classList.add("visible");
+}
+
+// Function to hide icon
+function hideAutoplayPrompt() {
+  autoplayIcon.classList.remove("visible");
+  autoplayIcon.classList.add("fade-out");
+  setTimeout(() => {
+    autoplayIcon.style.display = "none";
+    autoplayIcon.classList.remove("fade-out");
+  }, 2000);
+}
+
+// Try to play audio
+function tryAutoplay() {
+  jinseiloopAudio.play().then(() => {
+    console.log("Autoplay successful");
+    hideAutoplayPrompt();
+  }).catch((err) => {
+    console.warn("Autoplay blocked", err);
+    showAutoplayPrompt();
+    waitForUserInteraction();
+  });
+}
+
+function waitForUserInteraction() {
+  const resume = () => {
+    jinseiloopAudio.play().then(() => {
+      hideAutoplayPrompt();
+      document.removeEventListener("click", resume);
+      document.removeEventListener("keydown", resume);
+    });
+  };
+  document.addEventListener("click", resume);
+  document.addEventListener("keydown", resume);
+}
+
+// Start check
+tryAutoplay();
+
+const muteToggle = document.getElementById("mute-toggle");
+let isMuted = false;
+
+// Initialize icon and state
+muteToggle.src = "unmute.png";
+
+muteToggle.addEventListener("click", () => {
+  isMuted = !isMuted;
+  jinseiloopAudio.muted = isMuted;
+  muteToggle.src = isMuted ? "mute.png" : "unmute.png";
+});
+
+
+
+
+
+</script>
+
+
+</body>
