@@ -527,14 +527,9 @@ body {
     /* left: 34.4%; */
     position: absolute;
     bottom: 234.0%;
-    left: -110.2%;
-  }
-
-}
-
-@media screen and (max-width: 600px) {
-  .dropup-menu {
-    /* left: -110.2%; */
     left: -225.8%;
   }
+
 }
+
+
