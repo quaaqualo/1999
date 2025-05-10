@@ -5,13 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About</title>
   <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-
-<div id="star-container"></div>
-
-
-<style>
+  
+  <style>
 body {
     font-family: Arial, sans-serif; /* Choose a font */
     background-color: #333; /* Dark background for contrast */
@@ -147,10 +142,29 @@ body {
   }
 }
 
+.contact-text {
+  position: fixed;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  color: #aaa;
+  z-index: 9999;
+  pointer-events: none; /* So it doesn't block clicks */
+}
+
 }
   
 
 </style> 
+
+</head>
+<body>
+
+<div id="star-container"></div>
+
+
+
 
 <div class="centered-text">
      Quaaqualo is an music artist coming from Latvia. He's been writing music since 2018 but this current project has only started in 2023. He has released such works as MANIAKSCHITT and SUBLIMESCHITT. Also has been a frequent collaborator on MUSIC2 label artist releases, such as WEED GUMMY - FINE or secret contributions on COTASHONO - in my own words and etc. He is currently working hard on his third album, which hopefully will be released this year.   
@@ -337,5 +351,6 @@ muteToggle.addEventListener("click", () => {
 
 </script>
 
+<div class="contact-text">Contact: goldisthesky8@gmail.com</div>
 
 </body>

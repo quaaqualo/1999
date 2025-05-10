@@ -12,6 +12,17 @@ body {
   overflow: hidden; /* Hide scrollbars */
 }
 
+.contact-text {
+  position: fixed;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  color: #aaa;
+  z-index: 9999;
+  pointer-events: none; /* So it doesn't block clicks */
+}
+
 #star-container {
   position: fixed;
   top: 0;
@@ -516,7 +527,7 @@ body {
 
 .dropup-btn {
   /* position: fixed; */
-  bottom: 77.4px;
+  bottom: 146.6px;
   position: relative;
   right: 6.0px;
 }
@@ -529,5 +540,19 @@ body {
     bottom: 234.0%;
     left: -225.8%;
   }
+  
+  .dropup-menu a {
+    /* padding: 4.8px; */
+    padding: 4.4px;
+  }
+  
+  .tracklist {
+  /* height: 80vh; */
+  height: 50.6vh;
+  bottom: 35.6%;
+  position: ;
+}
+
+
 
 }
